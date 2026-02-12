@@ -12,214 +12,22 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #2f4f3e, #3b5f4a, #5a4a3b);
-  color: #f5f1ea;
+  background: linear-gradient(
+    to bottom,
+    #FFB703,
+    #FF8C42,
+    #FF6F61,
+    #C65B7C,
+    #6A5ACD,
+    #3A5F7D
+  );
+  color: #fffaf3;
 }
 
 /* HEADER */
 header {
-  background: rgba(47,79,62,0.95);
+  background: rgba(255, 183, 3, 0.85);
+  backdrop-filter: blur(6px);
   padding: 18px 26px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-.logo::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 3px;
-  margin-top: 6px;
-  background: linear-gradient(90deg, #FF6F61, #FFB3A0, #FF1F68);
-  border-radius: 3px;
-}
-
-/* NAV */
-.menu {
-  font-size: 28px;
-  cursor: pointer;
-}
-
-nav {
-  display: none;
-  flex-direction: column;
-  background: #3b5f4a;
-  position: absolute;
-  top: 70px;
-  right: 0;
-  width: 220px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-nav a {
-  padding: 16px 22px;
-  text-decoration: none;
-  color: #f5f1ea;
-  font-size: 15px;
-}
-
-nav a:hover {
-  background: linear-gradient(90deg, #FF6F61, #FF9A8B);
-  color: #2f2f2f;
-}
-
-/* HERO */
-.hero {
-  padding: 100px 20px 80px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 62px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 640px;
-  margin: auto;
-  font-size: 18px;
-  color: #e8e2d8;
-}
-
-/* DECORATIVE DIVIDER */
-.divider {
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, #FF4F00, #FFB3A0);
-  margin: 40px auto;
-  border-radius: 10px;
-}
-
-/* SECTIONS */
-.sections {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 34px;
-  padding: 70px 40px;
-}
-
-.card {
-  background: rgba(245,241,234,0.95);
-  color: #3a2f25;
-  padding: 34px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 35px 70px rgba(0,0,0,0.35);
-}
-
-.card h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 15px;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #FF6F61, #FF1F68);
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.card a:hover {
-  opacity: 0.85;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 14px;
-  color: #e2dccf;
-}
-
-/* DESKTOP NAV */
-@media (min-width: 768px) {
-  nav {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    box-shadow: none;
-    width: auto;
-  }
-  .menu {
-    display: none;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">Artkinza</div>
-  <div class="menu" onclick="toggleMenu()">☰</div>
-  <nav id="nav">
-    <a href="index.html">Home</a>
-    <a href="art.html">Art</a>
-    <a href="photography.html">Photography</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Artkinza</h1>
-  <div class="divider"></div>
-  <p>
-    Nature-led art and photography — forest tones, soft light,
-    and quiet details turned into things you can hold.
-  </p>
-</section>
-
-<section class="sections">
-  <div class="card">
-    <h2>Art</h2>
-    <p>Greeting cards, canvases, mugs & creative pieces.</p>
-    <a href="art.html">Explore Art</a>
-  </div>
-
-  <div class="card">
-    <h2>Photography</h2>
-    <p>Calendars, prints and future collections.</p>
-    <a href="photography.html">View Photography</a>
-  </div>
-</section>
-
-<footer>
-  © Artkinza — forest warmth & sunset calm
-</footer>
-
-<script>
-function toggleMenu() {
-  const nav = document.getElementById("nav");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-}
-</script>
-
-</body>
-</html>
+  justify-content: spac
