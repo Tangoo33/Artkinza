@@ -10,16 +10,8 @@
 <style>
 body {
   margin: 0;
-  background: linear-gradient(
-    180deg,
-    #FFD27F,
-    #FFB703,
-    #FF8C42,
-    #FF6F61,
-    #C65B7C,
-    #6A5ACD
-  );
   font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg,#FFD27F,#FFB703,#FF8C42,#FF6F61,#C65B7C,#6A5ACD);
   color: #2b1e17;
 }
 
@@ -27,13 +19,13 @@ body {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  background: rgba(255,215,128,0.9);
+  backdrop-filter: blur(8px);
   padding: 18px 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 215, 128, 0.85);
-  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 
 .logo {
@@ -42,21 +34,16 @@ header {
   letter-spacing: 2px;
 }
 
-.menu {
-  font-size: 28px;
-  cursor: pointer;
-}
+.menu { font-size: 28px; cursor: pointer; }
 
-/* NAV */
 nav {
   display: none;
   flex-direction: column;
   position: absolute;
   top: 70px;
   right: 20px;
-  background: rgba(255, 250, 243, 0.95);
+  background: rgba(255,250,243,0.95);
   border-radius: 18px;
-  overflow: hidden;
   box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
 
@@ -64,69 +51,89 @@ nav a {
   padding: 16px 22px;
   text-decoration: none;
   color: #2b1e17;
-  font-size: 15px;
 }
 
 nav a:hover {
-  background: linear-gradient(90deg, #FFB703, #FF6F61);
+  background: linear-gradient(90deg,#FFB703,#FF6F61);
 }
 
-/* HERO CARD */
-.main {
-  min-height: calc(100vh - 80px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
+/* SECTIONS */
+section {
+  padding: 90px 30px;
 }
 
-.card {
-  background: rgba(255, 250, 243, 0.94);
-  padding: 60px 50px;
-  border-radius: 28px;
+.hero {
   text-align: center;
-  max-width: 560px;
-  box-shadow: 0 35px 70px rgba(0,0,0,0.35);
 }
 
-.card h1 {
+.hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 64px;
-  margin: 0;
-  letter-spacing: 3px;
+  margin-bottom: 16px;
 }
 
-.underline {
-  width: 130px;
-  height: 4px;
-  margin: 22px auto 30px;
-  background: linear-gradient(90deg, #FF6F61, #FF1F68, #6BCF9B);
-  border-radius: 10px;
-}
-
-.card p {
+.hero p {
+  max-width: 620px;
+  margin: auto;
   font-size: 18px;
-  line-height: 1.6;
+}
+
+/* ABOUT */
+.about {
+  background: rgba(255,250,243,0.92);
+  border-radius: 30px;
+  max-width: 900px;
+  margin: auto;
+  padding: 60px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+/* DISPLAY SECTIONS */
+.display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.image-box {
+  height: 300px;
+  background: #ddd;
+  border-radius: 24px;
+}
+
+.display h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+.display a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(90deg,#FF6F61,#FF1F68);
+  color: white;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #fff1e6;
 }
 
 /* DESKTOP NAV */
-@media (min-width: 768px) {
+@media (min-width:768px){
   nav {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    box-shadow: none;
+    display:flex!important;
+    position:static;
+    flex-direction:row;
+    background:none;
+    box-shadow:none;
   }
-
-  .menu {
-    display: none;
-  }
-
-  nav a {
-    margin-left: 18px;
-    border-radius: 12px;
-  }
+  .menu{display:none;}
 }
 </style>
 </head>
@@ -144,21 +151,55 @@ nav a:hover {
   </nav>
 </header>
 
-<div class="main">
-  <div class="card">
-    <h1>Artkinza</h1>
-    <div class="underline"></div>
+<section class="hero">
+  <h1>Artkinza</h1>
+  <p>
+    A creative studio creating art and photography-led pieces —
+    from greeting cards and calendars to prints and objects for everyday life.
+  </p>
+</section>
+
+<section>
+  <div class="about">
     <p>
-      Art and photography inspired by golden hour —
-      warmth, fading light, and quiet moments turned into something you can hold.
+      Artkinza is a growing creative brand focused on thoughtful design,
+      nature-led imagery, and pieces that feel personal rather than mass-produced.
+      Each collection begins with original artwork or photography and is developed
+      into products designed to be kept, gifted, or displayed.
     </p>
   </div>
-</div>
+</section>
+
+<section class="display">
+  <div class="image-box"></div>
+  <div>
+    <h2>Art</h2>
+    <p>
+      Greeting cards, canvases, and creative products made from original artwork.
+    </p>
+    <a href="art.html">Explore Art</a>
+  </div>
+</section>
+
+<section class="display">
+  <div>
+    <h2>Photography</h2>
+    <p>
+      Calendars, prints, and future photography-based collections.
+    </p>
+    <a href="photography.html">View Photography</a>
+  </div>
+  <div class="image-box"></div>
+</section>
+
+<footer>
+  © Artkinza
+</footer>
 
 <script>
-function toggleMenu() {
-  const nav = document.getElementById("nav");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+function toggleMenu(){
+  const nav=document.getElementById("nav");
+  nav.style.display=nav.style.display==="flex"?"none":"flex";
 }
 </script>
 
