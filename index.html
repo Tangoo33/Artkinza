@@ -1,145 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Artkinza</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Artkinza</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #fff8f0;
-      color: #4b3f36;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #2f4f3e, #3b5f4a, #5a4a3b);
+  color: #f5f1ea;
+}
 
-    header {
-      background-color: #f1e3d6;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* HEADER */
+header {
+  background: rgba(47,79,62,0.95);
+  padding: 18px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 700;
-    }
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  position: relative;
+}
 
-    nav {
-      display: none;
-      flex-direction: column;
-      background-color: #f1e3d6;
-      position: absolute;
-      top: 64px;
-      right: 0;
-      width: 200px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+.logo::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, #FF6F61, #FFB3A0, #FF1F68);
+  border-radius: 3px;
+}
 
-    nav a {
-      padding: 14px 20px;
-      text-decoration: none;
-      color: #4b3f36;
-    }
+/* NAV */
+.menu {
+  font-size: 28px;
+  cursor: pointer;
+}
 
-    nav a:hover {
-      background-color: #e3d8cd;
-    }
+nav {
+  display: none;
+  flex-direction: column;
+  background: #3b5f4a;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 220px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
 
-    .menu {
-      font-size: 26px;
-      cursor: pointer;
-    }
+nav a {
+  padding: 16px 22px;
+  text-decoration: none;
+  color: #f5f1ea;
+  font-size: 15px;
+}
 
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-    }
+nav a:hover {
+  background: linear-gradient(90deg, #FF6F61, #FF9A8B);
+  color: #2f2f2f;
+}
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 56px;
-      margin-bottom: 16px;
-    }
+/* HERO */
+.hero {
+  padding: 100px 20px 80px;
+  text-align: center;
+}
 
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-      color: #6a5a4d;
-    }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 62px;
+  margin-bottom: 20px;
+}
 
-    .sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      padding: 60px 40px;
-    }
+.hero p {
+  max-width: 640px;
+  margin: auto;
+  font-size: 18px;
+  color: #e8e2d8;
+}
 
-    .card {
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* DECORATIVE DIVIDER */
+.divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF4F00, #FFB3A0);
+  margin: 40px auto;
+  border-radius: 10px;
+}
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
+/* SECTIONS */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 34px;
+  padding: 70px 40px;
+}
 
-    .card h2 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
-    }
+.card {
+  background: rgba(245,241,234,0.95);
+  color: #3a2f25;
+  padding: 34px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
 
-    .card a {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 20px;
-      background-color: #d49b6b;
-      color: white;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 35px 70px rgba(0,0,0,0.35);
+}
 
-    .card a:hover {
-      background-color: #b87f52;
-    }
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 12px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #7a6a5d;
-    }
+.card p {
+  font-size: 15px;
+}
 
-    @media (min-width: 768px) {
-      nav {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        box-shadow: none;
-        width: auto;
-      }
+.card a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #FF6F61, #FF1F68);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-      .menu {
-        display: none;
-      }
-    }
-  </style>
+.card a:hover {
+  opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: #e2dccf;
+}
+
+/* DESKTOP NAV */
+@media (min-width: 768px) {
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    width: auto;
+  }
+  .menu {
+    display: none;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -155,35 +189,36 @@
 
 <section class="hero">
   <h1>Artkinza</h1>
+  <div class="divider"></div>
   <p>
-    Warm, thoughtful art and photography inspired by nature,
-    quiet moments, and the beauty of small details.
+    Nature-led art and photography — forest tones, soft light,
+    and quiet details turned into things you can hold.
   </p>
 </section>
 
 <section class="sections">
   <div class="card">
     <h2>Art</h2>
-    <p>Greeting cards, canvases, and creative pieces.</p>
+    <p>Greeting cards, canvases, mugs & creative pieces.</p>
     <a href="art.html">Explore Art</a>
   </div>
 
   <div class="card">
     <h2>Photography</h2>
-    <p>Calendars, prints, and future collections.</p>
+    <p>Calendars, prints and future collections.</p>
     <a href="photography.html">View Photography</a>
   </div>
 </section>
 
 <footer>
-  © Artkinza — quietly creating
+  © Artkinza — forest warmth & sunset calm
 </footer>
 
 <script>
-  function toggleMenu() {
-    const nav = document.getElementById("nav");
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-  }
+function toggleMenu() {
+  const nav = document.getElementById("nav");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
 </script>
 
 </body>
