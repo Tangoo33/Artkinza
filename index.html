@@ -5,15 +5,11 @@
 <title>Artkinza</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(
     180deg,
     #FFD27F,
@@ -27,15 +23,73 @@ body {
   color: #2b1e17;
 }
 
-.main {
-  text-align: center;
-  background: rgba(255, 250, 243, 0.92);
-  padding: 60px 50px;
-  border-radius: 24px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 18px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 215, 128, 0.85);
+  backdrop-filter: blur(8px);
 }
 
-h1 {
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.menu {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* NAV */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(255, 250, 243, 0.95);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+nav a {
+  padding: 16px 22px;
+  text-decoration: none;
+  color: #2b1e17;
+  font-size: 15px;
+}
+
+nav a:hover {
+  background: linear-gradient(90deg, #FFB703, #FF6F61);
+}
+
+/* HERO CARD */
+.main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 250, 243, 0.94);
+  padding: 60px 50px;
+  border-radius: 28px;
+  text-align: center;
+  max-width: 560px;
+  box-shadow: 0 35px 70px rgba(0,0,0,0.35);
+}
+
+.card h1 {
   font-family: 'Playfair Display', serif;
   font-size: 64px;
   margin: 0;
@@ -43,31 +97,70 @@ h1 {
 }
 
 .underline {
-  width: 120px;
+  width: 130px;
   height: 4px;
-  margin: 20px auto 30px;
+  margin: 22px auto 30px;
   background: linear-gradient(90deg, #FF6F61, #FF1F68, #6BCF9B);
   border-radius: 10px;
 }
 
-p {
+.card p {
   font-size: 18px;
-  max-width: 500px;
-  margin: auto;
+  line-height: 1.6;
+}
+
+/* DESKTOP NAV */
+@media (min-width: 768px) {
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  nav a {
+    margin-left: 18px;
+    border-radius: 12px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <div class="logo">Artkinza</div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="art.html">Art</a>
+    <a href="photography.html">Photography</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
 <div class="main">
-  <h1>Artkinza</h1>
-  <div class="underline"></div>
-  <p>
-    Art and photography inspired by golden hour —
-    warmth, calm, and colour held gently.
-  </p>
+  <div class="card">
+    <h1>Artkinza</h1>
+    <div class="underline"></div>
+    <p>
+      Art and photography inspired by golden hour —
+      warmth, fading light, and quiet moments turned into something you can hold.
+    </p>
+  </div>
 </div>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("nav");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>
