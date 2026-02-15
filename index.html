@@ -21,22 +21,27 @@
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      background: rgba(0,0,0,0.25);
-      backdrop-filter: blur(10px);
-    }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  box-sizing: border-box;
+  z-index: 1000;
+}
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin-left: 25px;
-      font-weight: 400;
-    }
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 
     .hero {
       height: 100vh;
@@ -117,6 +122,81 @@
         font-size: 70px;
       }
     }
+    .content-section {
+  padding: 140px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.split-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.split-block img {
+  width: 50%;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+.text-box {
+  width: 50%;
+  background: rgba(255, 244, 225, 0.92);
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.text-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-top: 0;
+}
+
+.text-box p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.text-box a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #4a1f14;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .split-block,
+  .reverse {
+    flex-direction: column;
+  }
+
+  .split-block img,
+  .text-box {
+    width: 100%;
+  }
+}
+
   </style>
  .products-overview {
   padding: 120px 10%;
@@ -208,27 +288,34 @@ each piece is designed to feel thoughtful, warm, and timeless.
   </div>
 </section>
 
-<section class="section-preview">
-  <div class="preview-grid">
+<section class="content-section">
 
-    <div class="preview-card">
-     <img src="your-art.jpg" class="preview-image">
-      <h2>Art Collection</h2>
-      <p>Greeting cards, canvases, and creative pieces for everyday beauty.</p>
+  <div class="split-block fade-in">
+    <img src="art1.jpg" alt="Art Example">
+    <div class="text-box">
+      <h2>Art</h2>
+      <p>
+        Original paintings exploring both natural landscapes and
+        architectural forms. From greeting cards to future canvas collections,
+        each piece is created to feel warm, intentional, and timeless.
+      </p>
       <a href="art.html">Explore Art</a>
     </div>
+  </div>
 
-    <div class="preview-card">
-     <img src="your-photo.jpg" class="preview-image">
+  <div class="split-block reverse fade-in">
+    <img src="sparrow.jpg" alt="Photography Example">
+    <div class="text-box">
+      <h2>Photography</h2>
       <p>
-Nature and architectural photography — from quiet wildlife moments
-to striking buildings and city details. Available as calendars,
-prints, and future collections.
-</p>
+        Wildlife, nature, buildings, and architectural details —
+        captured through a calm, observant lens.
+        Available as prints, calendars, and curated collections.
+      </p>
       <a href="photography.html">Explore Photography</a>
     </div>
-
   </div>
+
 </section>
 
 <footer>
