@@ -97,7 +97,8 @@
       margin-left: 40px;
       font-size: 16px;
     }
-.text-box {
+
+    .text-box {
       width: 50%;
       background: rgba(255, 245, 230, 0.95);
       padding: 60px;
@@ -133,3 +134,42 @@
       background: rgba(0,0,0,0.35);
       color: white;
     }
+
+    @media (max-width: 900px) {
+      .split-block,
+      .reverse {
+        flex-direction: column;
+      }
+
+      .split-block img,
+      .text-box {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Artkinza</div>
+  <div>
+    <a href="art.html">Art</a>
+    <a href="photography.html">Photography</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-box">
+    <h1>Artkinza</h1>
+    <p>
+      Artkinza creates illustrated greeting cards, limited canvas pieces,
+      and printed photography cards.
+      A growing creative studio built slowly and intentionally.
+    </p>
+  </div>
+</section>
