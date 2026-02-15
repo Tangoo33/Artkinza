@@ -88,10 +88,12 @@
       padding-bottom: 30px;
     }
 
-    .preview-image {
-      height: 250px;
-      background: linear-gradient(45deg, #d7a86e, #8b5e3c);
-    }
+  .preview-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
 
     .preview-card h2 {
       margin-top: 25px;
@@ -145,14 +147,14 @@
   <div class="preview-grid">
 
     <div class="preview-card">
-      <div class="preview-image"></div>
+     <img src="your-art.jpg" class="preview-image">
       <h2>Art Collection</h2>
       <p>Greeting cards, canvases, and creative pieces for everyday beauty.</p>
       <a href="art.html">Explore Art</a>
     </div>
 
     <div class="preview-card">
-      <div class="preview-image"></div>
+     <img src="your-photo.jpg" class="preview-image">
       <h2>Photography</h2>
       <p>Calendars, prints, and nature-inspired collections.</p>
       <a href="photography.html">Explore Photography</a>
