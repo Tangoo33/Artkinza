@@ -199,7 +199,7 @@
 
   <div class="nav-right">
     <input type="text" class="search-bar" placeholder="Search">
-    <span class="icon">♡</span>
+    <span class="icon" onclick="toggleHeart(this)">♡</span>
     <div class="icon">
   🛒
   <span class="cart-count">0</span>
@@ -243,6 +243,25 @@
 <footer>
   © 2026 Artkinza
 </footer>
+<script>
+let cartCount = 0;
+const cartDisplay = document.querySelector(".cart-count");
+
+function addToCart() {
+  cartCount++;
+  cartDisplay.textContent = cartCount;
+}
+  function toggleHeart(el) {
+  if (el.textContent === "♡") {
+    el.textContent = "♥";
+    el.style.color = "red";
+  } else {
+    el.textContent = "♡";
+    el.style.color = "black";
+  }
+}
+
+</script>
 
 </body>
 </html>
