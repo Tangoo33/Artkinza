@@ -15,16 +15,16 @@
     /* TOP BAR */
     nav {
       position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 70px; /* increased side padding */
-      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-      z-index: 1000;
-      box-sizing: border-box; /* prevents cutting */
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 50px;   /* fixed spacing */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  z-index: 1000;
+  box-sizing: border-box;
     }
     
     .logo { 
@@ -46,8 +46,9 @@
     
     .nav-right {
       display: flex;
-      align-items: center;
-      gap: 30px;
+  align-items: center;
+  gap: 25px;
+  padding-right: 10px; /* prevents clipping */
     }
     
     .search-bar {
@@ -57,8 +58,19 @@
     }
     
     .icon {
-      font-size: 30px;
-      cursor: pointer;
+    .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: black;
+  color: white;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 26px;
+  cursor: pointer;
+  position: relative;
     }
     
     /* HERO */ 
@@ -187,7 +199,10 @@
       <div class="nav-right">
         <input type="text" class="search-bar" placeholder="Search"> 
         <span class="icon">♡</span>
-        <span class="icon">🛒</span>
+        <div class="icon">
+    🛒
+  <span class="cart-count">0</span>
+</div>
       </div>
     </nav>
     
