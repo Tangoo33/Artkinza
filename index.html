@@ -118,6 +118,42 @@
       }
     }
   </style>
+ .products-overview {
+  padding: 120px 10%;
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.product-item {
+  padding: 30px;
+  border-radius: 20px;
+  background: #f8f4ef;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.product-item h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </head>
 
 <body>
@@ -142,6 +178,33 @@ From wildlife to buildings, canvases to calendars —
 each piece is designed to feel thoughtful, warm, and timeless.
 
     </p>
+  </div>
+</section>
+<section class="products-overview">
+  <h2 class="section-title">What Artkinza Creates</h2>
+
+  <div class="products-grid">
+
+    <div class="product-item">
+      <h3>Greeting Cards</h3>
+      <p>Original artwork turned into meaningful, high-quality cards.</p>
+    </div>
+
+    <div class="product-item">
+      <h3>Fine Art Canvases</h3>
+      <p>Painted pieces exploring both natural scenes and architecture.</p>
+    </div>
+
+    <div class="product-item">
+      <h3>Photography Prints</h3>
+      <p>Wildlife, landscapes, buildings, and city details available as prints.</p>
+    </div>
+
+    <div class="product-item">
+      <h3>Calendars</h3>
+      <p>Carefully curated seasonal collections from both art and photography.</p>
+    </div>
+
   </div>
 </section>
 
