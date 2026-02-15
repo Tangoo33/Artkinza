@@ -14,19 +14,20 @@
     }
 
     /* TOP BAR */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 50px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-      z-index: 1000;
-    }
-
+   nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 70px;   /* increased side padding */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  z-index: 1000;
+  box-sizing: border-box;  /* prevents cutting */
+}
+    
     .logo {
       font-family: 'Cinzel', serif;
       font-size: 26px;
@@ -57,7 +58,7 @@
     }
 
     .icon {
-      font-size: 18px;
+      font-size: 20px;
       cursor: pointer;
     }
 
