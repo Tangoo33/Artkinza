@@ -156,3 +156,59 @@
       text-align: center;
       background: #f8f8f8;
     }
+
+    @media (max-width: 900px) {
+      .section {
+        flex-direction: column;
+      }
+      .section img,
+      .section-text {
+        width: 100%;
+      }
+      .hero h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Artkinza</div>
+
+  <div class="nav-center">
+    <a href="art.html">Art</a>
+    <a href="photography.html">Photography</a>
+    <a href="#">Help</a>
+  </div>
+
+  <div class="nav-right">
+    <input type="text" class="search-bar" placeholder="Search">
+    <span class="icon">♡</span>
+    <span class="icon">🛒</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-box">
+    <h1>Artkinza</h1>
+    <p>
+      Illustrated greeting cards, limited canvas pieces,
+      and printed photography cards —
+      building slowly and intentionally.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <img src="art1.jpg" alt="Art">
+  <div class="section-text">
+    <h2>Art</h2>
+    <p>
+      Original illustrated cards and a small collection
+      of limited canvas works.
+    </p>
+    <a href="art.html" class="button">Explore Art</a>
+  </div>
+</section>
