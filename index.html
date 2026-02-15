@@ -58,7 +58,18 @@
     }
 
     .icon {
-      font-size: 30px;
+     .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: black;
+  color: white;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+ font-size: 30px;
       cursor: pointer;
     }
 
@@ -187,8 +198,10 @@
   <div class="nav-right">
     <input type="text" class="search-bar" placeholder="Search">
     <span class="icon">♡</span>
-    <span class="icon" title="cart">🛒</span>
-  </div>
+    <div class="icon">
+  🛒
+  <span class="cart-count">0</span>
+</div>
 </nav>
 
 <section class="hero">
