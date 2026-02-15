@@ -3,215 +3,43 @@
 <head>
   <title>Artkinza</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      padding-top: 90px;
       font-family: 'Poppins', sans-serif;
       color: #2e1a12;
-      background: linear-gradient(
-        135deg,
-        #FF6F61,
-        #FF9A8B,
-        #FFB3A0,
-        #FF4F00,
-        #6A4C93
-      );
-      background-attachment: fixed;
+      background: #fff;
     }
 
+    /* TOP BAR */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 20px 60px;
+      background: white;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: rgba(0,0,0,0.35);
-      backdrop-filter: blur(12px);
-      box-sizing: border-box;
+      justify-content: space-between;
+      padding: 15px 50px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
       z-index: 1000;
     }
 
-    .hero {
-      height: 85vh;
+    .logo {
+      font-family: 'Cinzel', serif;
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+
+    .nav-center {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero-box {
-      background: rgba(255, 244, 225, 0.92);
-      padding: 70px;
-      border-radius: 45px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.3);
-      max-width: 750px;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 110px;
-      margin: 0 0 20px 0;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    .content-section {
-      padding: 140px 10%;
-      display: flex;
-      flex-direction: column;
-      gap: 120px;
-    }
-
-    .split-block {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .split-block img {
-      width: 50%;
-      border-radius: 30px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-      object-fit: cover;
-    }
-
-    nav .logo {
-      color: white;
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin-left: 40px;
-      font-size: 16px;
-    }
-
-    .text-box {
-      width: 50%;
-      background: rgba(255, 245, 230, 0.95);
-      padding: 60px;
-      border-radius: 35px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.18);
-    }
-
-    .text-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      margin-top: 0;
-    }
-
-    .text-box p {
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .text-box a {
-      text-decoration: none;
+      gap: 40px;
       font-weight: 500;
-      color: #4a1f14;
     }
 
-    .reverse {
-      flex-direction: row-reverse;
+    .nav-center a {
+      text-decoration: none;
+      color: black;
     }
-
-    footer {
-      text-align: center;
-      padding: 50px;
-      font-size: 14px;
-      background: rgba(0,0,0,0.35);
-      color: white;
-    }
-
-    @media (max-width: 900px) {
-      .split-block,
-      .reverse {
-        flex-direction: column;
-      }
-
-      .split-block img,
-      .text-box {
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: 70px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<nav>
-  <div class="logo">Artkinza</div>
-  <div>
-    <a href="art.html">Art</a>
-    <a href="photography.html">Photography</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-box">
-    <h1>Artkinza</h1>
-    <p>
-      Artkinza creates illustrated greeting cards, limited canvas pieces,
-      and printed photography cards.
-      A growing creative studio built slowly and intentionally.
-    </p>
-  </div>
-</section>
-
-  <section class="content-section">
-
-  <div class="split-block">
-    <img src="art1.jpg" alt="Art Example">
-    <div class="text-box">
-      <h2>Art</h2>
-      <p>
-        Illustrated greeting cards and a small collection of limited canvases.
-        Each design begins as an original painting,
-        created with warmth, detail, and careful composition.
-      </p>
-      <p style="opacity:0.6; font-size:14px;">
-        Additional releases will be introduced gradually.
-      </p>
-      <a href="art.html">Explore Art</a>
-    </div>
-  </div>
-
-  <div class="split-block reverse">
-    <img src="sparrow.jpg" alt="Photography Example">
-    <div class="text-box">
-      <h2>Photography</h2>
-      <p>
-        Printed photography cards featuring both natural and architectural subjects —
-        from wildlife to carefully observed buildings and structures.
-      </p>
-      <p style="opacity:0.6; font-size:14px;">
-        Future collections are currently in development.
-      </p>
-      <a href="photography.html">Explore Photography</a>
-    </div>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 Artkinza. All rights reserved.
-</footer>
-
-</body>
-</html>
